@@ -110,7 +110,7 @@ int coinChange_bruteForce(vector<uint32_t> &coins, uint32_t change){
 
 int main(int argc, char **argv){
     for (int i = 0; i < argc; i++){
-        if (argv[i] == "-h" || argv[i] == "--help"){
+        if (!strcmp(argv[i], "-h") || !strcmp(argv[i], "--help")){
             cout << "usage: ./coin [CHANGE_TARGET] <[COINS_SEQ]>\n";
             return 0;
         }
